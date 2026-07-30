@@ -1,20 +1,100 @@
 aid: 8tracks
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/8tracks.png
 name: 8Tracks
-description: 8Tracks is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  8tracks was a San Francisco-based internet radio and social music-streaming
+  service that let people create and share handcrafted playlists ("mixes") of at
+  least eight tracks, discover mixes by mood, activity, genre, and tag, and play
+  them back through the web, iOS, and Android apps. Founded in 2008, it grew to
+  more than eight million monthly listeners by 2014 before declining. 8tracks
+  published a public REST API (v2/v3) that exposed mix discovery, playback token
+  sessions, track skip/report events, and user likes/favorites, but stopped
+  issuing new API keys in February 2015. The company ceased operations on
+  December 31, 2019, briefly relaunched under BackBeat Inc. in April 2020, and
+  the service has been inactive since. This profile documents the historical API
+  surface and web properties.
 url: https://raw.githubusercontent.com/api-evangelist/8tracks/refs/heads/main/apis.yml
 x-type: company
 x-source: a16z-portfolio
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: inactive
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
-apis: []
+- Music
+- Streaming
+- Radio
+- Playlists
+- Audio
+- Media
+- Entertainment
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DeveloperPortal
+  url: https://8tracks.com/developers
+- type: Documentation
+  url: https://8tracks.com/developers/includes
+- type: APIReference
+  url: https://8tracks.com/developers/api_v3
+- type: Blog
+  url: https://blog.8tracks.com
+- type: Authentication
+  url: authentication/8tracks-authentication.yml
+- type: Conventions
+  url: conventions/8tracks-conventions.yml
+- type: Lifecycle
+  url: lifecycle/8tracks-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/8tracks-lifecycle.yml
+- type: Packages
+  url: packages/8tracks-packages.yml
+- type: DomainSecurity
+  url: security/8tracks-domain-security.yml
+- type: WellKnown
+  url: well-known/8tracks-well-known.yml
+apis:
+- name: 8tracks API v3
+  description: >-
+    Historical public REST API for the 8tracks internet-radio platform. Exposes
+    mix discovery and search, per-session play tokens, playback control
+    (play/next/skip/report), similar-mix recommendation, and authenticated user
+    actions (likes, track favorites). Responses are available in JSON, XML, and
+    JSONP. New API keys have not been issued since February 2015 and the service
+    is inactive.
+  humanURL: https://8tracks.com/developers/api_v3
+  baseURL: https://8tracks.com/
+  tags:
+  - Music
+  - Streaming
+  - Playlists
+  properties:
+  - type: APIReference
+    url: https://8tracks.com/developers/api_v3
+  - type: Documentation
+    url: https://8tracks.com/developers/includes
+  - type: Authentication
+    url: authentication/8tracks-authentication.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
