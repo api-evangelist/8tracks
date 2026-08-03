@@ -1,0 +1,67 @@
+generated: '2026-07-17'
+method: searched
+source: >-
+  8tracks API v3 documentation (https://8tracks.com/developers/api_v3) and the
+  field-includes reference (https://8tracks.com/developers/includes), cross-checked
+  against community client libraries.
+api: 8tracks API v3
+auth_style: >-
+  API key (X-Api-Key header or api_key param) plus a mandatory version selector
+  (X-Api-Version header or api_version param); user token (X-User-Token) for
+  user-scoped actions. See authentication/8tracks-authentication.yml.
+content_negotiation:
+  style: url-extension-or-param
+  formats:
+  - json
+  - xml
+  - jsonp
+  description: >-
+    Every call is available in JSON, XML, and JSONP. The format is selected by
+    the resource extension (e.g. mixes.json / mixes.xml) or a format query
+    parameter. JSONP accepts a callback parameter.
+versioning:
+  style: header-or-param
+  header: X-Api-Version
+  param: api_version
+  current: '3'
+  description: >-
+    The API version must be declared on every request. Version 3 is the latest
+    documented surface; version 2 was the prior generation. See
+    lifecycle/8tracks-lifecycle.yml.
+field_expansion:
+  style: include-list
+  param: include
+  join: comma-or-plus
+  description: >-
+    Clients request additional embedded fields/relations by passing an include
+    parameter listing the desired field groups, joined by commas or plus signs
+    (e.g. include=mixes[likes_count+cover_urls]). Only requested groups are
+    returned, keeping default payloads small.
+error_envelope:
+  style: status-field
+  format: proprietary-json
+  fields:
+  - status
+  - errors
+  - notices
+  description: >-
+    Responses carry a top-level status field whose value mirrors the HTTP status
+    line (e.g. "200 OK"). Error and informational conditions are surfaced via
+    errors/notices fields in the same envelope rather than RFC 9457 problem
+    documents. See errors/ (not present; no dedicated problem-type catalog was
+    published).
+pagination:
+  style: page-per-page
+  params:
+  - page
+  - per_page
+  description: >-
+    Collection endpoints (e.g. mixes.json, users/{username}/mixes.json) accept
+    page and per_page parameters for offset-style paging.
+request_id_tracing: none
+rate_limit_signaling: undocumented
+idempotency: none
+notes: >-
+  The documented surface is read-heavy (mix discovery + playback token flow);
+  the few write actions (like/fav) are user-token scoped and do not use
+  idempotency keys.

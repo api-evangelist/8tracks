@@ -1,0 +1,25 @@
+generated: '2026-07-17'
+method: probed
+source: live HTTP probes of https://8tracks.com/.well-known/*
+notes: >-
+  8tracks.com sits behind Cloudflare bot protection and the service is inactive;
+  every probe returned 403 Forbidden. No .well-known documents were retrievable.
+  Absence/blocked is a valid, expected result for a defunct provider.
+hosts:
+- host: 8tracks.com
+  probes:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null

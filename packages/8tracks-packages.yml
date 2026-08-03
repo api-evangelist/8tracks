@@ -1,0 +1,36 @@
+generated: '2026-07-17'
+method: searched
+source: >-
+  Registry and repository search across CPAN, PyPI/GitHub, and Hackage. No
+  first-party 8tracks SDK was published on npm, PyPI, Maven Central, NuGet,
+  RubyGems, Packagist, or crates.io. The libraries below are community-maintained
+  clients for the historical 8tracks API.
+api: 8tracks API v3
+official_sdk: false
+packages:
+- name: WebService::8tracks
+  ecosystem: cpan
+  language: perl
+  registry_url: https://metacpan.org/pod/WebService::8tracks
+  source_url: https://github.com/motemen/WebService-8tracks
+  official: false
+  description: Perl client wrapping the 8tracks API (community-maintained).
+- name: orochi
+  ecosystem: pypi/github
+  language: python
+  source_url: https://github.com/dbrgn/orochi
+  official: false
+  description: >-
+    Python command-line 8tracks player; embeds an API client covering mix
+    search, play-token sessions, and playback control (community-maintained).
+- name: lord
+  ecosystem: hackage
+  language: haskell
+  registry_url: https://hackage.haskell.org/package/lord
+  official: false
+  description: >-
+    Haskell radio player with a Radio.EightTracks module implementing the
+    8tracks API (community-maintained, not 8tracks-exclusive).
+notes: >-
+  No official first-party client library exists. Marked official:false throughout;
+  no SDKs pointer is emitted in apis.yml because none of these are first-party.

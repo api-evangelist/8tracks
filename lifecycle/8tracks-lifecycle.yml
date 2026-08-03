@@ -1,0 +1,46 @@
+generated: '2026-07-17'
+method: searched
+source: >-
+  8tracks API v3 documentation, the 8tracks blog post "To everything there is a
+  season" (2019-12-26, https://blog.8tracks.com/2019/12/26/to-everything-there-is-a-season/),
+  Wikipedia (https://en.wikipedia.org/wiki/8tracks.com), and industry coverage
+  (Music Ally, Digital Music News).
+api: 8tracks API v3
+status: inactive
+versioning:
+  scheme: integer-version
+  mechanism: X-Api-Version header or api_version query parameter
+  versions:
+  - version: '2'
+    status: superseded
+  - version: '3'
+    status: latest-documented
+  current: '3'
+deprecation:
+  policy_published: true
+  summary: >-
+    8tracks stopped issuing new API keys in February 2015; developers already
+    holding keys could continue against the existing v3 documentation. No formal
+    RFC 8594 Sunset/Deprecation header scheme was documented. The underlying
+    platform, and therefore the API, was fully deprecated when the company ceased
+    operations.
+  new_keys_since: null
+  new_keys_frozen: '2015-02'
+timeline:
+- date: '2008'
+  event: 8tracks founded (San Francisco); handcrafted mix streaming launches.
+- date: '2015-02'
+  event: New API key issuance frozen; existing keys continue to work.
+- date: '2019-12-26'
+  event: Shutdown announced via blog post citing lack of revenue and no acquirer.
+- date: '2019-12-31'
+  event: Service ceased operations.
+- date: '2020-04-19'
+  event: Relaunched under new owner BackBeat Inc.; streaming restored, new-mix creation disabled.
+- date: '2024'
+  event: Service inactive.
+sla: none-published
+status_page: none-published
+notes: >-
+  Deprecation here reflects a real, publicly documented wind-down rather than a
+  versioned deprecation program. No status page or SLA was published.
