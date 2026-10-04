@@ -88,7 +88,6 @@ apis:
     and authenticated user actions (likes, track favorites). Responses are available in JSON, XML, and
     JSONP. New API keys have not been issued since February 2015 and the service is inactive.
   humanURL: https://8tracks.com/developers/api_v3
-  baseURL: https://8tracks.com/
   tags:
   - Music
   - Streaming
