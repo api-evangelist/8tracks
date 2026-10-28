@@ -64,6 +64,54 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-8Tracks is a company surfaced as a portfolio company of a16z and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+> **No live API surface.** Nothing from this company could be reached the last time it was checked: the site is offline, parked or unreachable, or no public API was found. This profile is kept as a historical record and is not maintained or rated.
 
-Source: portfolio company of [a16z](https://github.com/api-evangelist/a16z)
+**Status:** inactive
+
+8tracks was a San Francisco-based internet radio and social music-streaming service that let people create and share handcrafted playlists ("mixes") of at least eight tracks, discover mixes by mood, activity, genre, and tag, and play them back through the web, iOS, and Android apps. Founded in 2008, it grew to more than eight million monthly listeners by 2014 before declining. 8tracks published a public REST API (v2/v3) that exposed mix discovery, playback token sessions, track skip/report events, and user likes/favorites, but stopped issuing new API keys in February 2015. The company ceased operations on December 31, 2019, briefly relaunched under BackBeat Inc. in April 2020, and the service has been inactive since. This profile documents the historical API surface and web properties.
+
+**Areas:** Company · Music · Streaming · Radio · Playlists · Audio · Media · Entertainment
+
+## 8Tracks on APIs.io (historical record)
+
+Everything profiled for 8Tracks is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/8tracks/](https://apis.io/providers/8tracks/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [8tracks API v3](https://apis.io/apis/8tracks/8tracks-api-v3/) — Historical public REST API for the 8tracks internet-radio platform. Exposes mix discovery and search, per-session play tokens, playback control…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [8Tracks Authentication](https://apis.io/security/8tracks/8tracks-authentication/)
+- [8Tracks Domain Security](https://apis.io/security/8tracks/8tracks-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://8tracks.com)
+- [Documentation](https://8tracks.com/developers/includes)
+- [API reference](https://8tracks.com/developers/api_v3)
+- [Blog](https://blog.8tracks.com)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no live api surface, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for 8Tracks: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/8tracks/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
